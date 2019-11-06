@@ -1,0 +1,29 @@
+<html>
+    <head>
+ 
+    </head>
+    <body>
+        <script>
+            var name = prompt("Enter your name")
+            console.log('Welcome to gess game ' +name)
+            var targetNumber = Math.round(Math.random() * 100)
+            var maxGessNumber = 10;
+            console.log(targetNumber);
+            for(var playerGuessNumber = 0; playerGuessNumber < maxGessNumber; playerGuessNumber++)
+            {
+                var guess = prompt("Enter guess number")
+                if(guess < targetNumber) {
+                    console.log('Oops. Your guess was LOW')
+                } else if(guess > targetNumber) {
+                    console.log('Oops. Your guess was HIGH')
+                } else if(guess == targetNumber) {
+                    console.log('Good Job '+ name +'! You guessed my number')
+                    break
+                } else {
+                    console.log('Oops. Your guess was over')
+                }
+                
+            }
+        </script>
+    </body>
+</html> 
